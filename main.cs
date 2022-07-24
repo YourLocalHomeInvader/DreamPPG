@@ -77,11 +77,11 @@ ModAPI.Register(
 						Cartridge customCartridge = ModAPI.FindCartridge("9mm");
 						customCartridge.name = "DMusic";
 						firearm.Cartridge = customCartridge;
-						customCartridge.Damage = 0f; //change the damage however you like
-						customCartridge.StartSpeed *= 0f; //change the bullet velocity
-						customCartridge.PenetrationRandomAngleMultiplier *= 0f; //change the accuracy when the bullet travels through an object
-						customCartridge.Recoil *= 0f; //change the recoil
-						customCartridge.ImpactForce *= 0f; //change how much the bullet pushes the target
+						customCartridge.Damage = 0f; 
+						customCartridge.StartSpeed *= 0f; 
+						customCartridge.PenetrationRandomAngleMultiplier *= 0f; 
+						customCartridge.Recoil *= 0f; 
+						customCartridge.ImpactForce *= 0f; 
 						firearm.ShotSounds = new AudioClip[]
 						{
 							ModAPI.LoadSound("sounds/Trance Music.mp3"),
