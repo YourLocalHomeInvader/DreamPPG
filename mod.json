@@ -1,0 +1,21 @@
+{
+  "Name": "Dream",
+  "Author": "Your Local Home Invader",
+  "Description": "Yo its that one green dude from Minecraft!!",
+  "ModVersion": "1.20.08",
+  "GameVersion": "1.11+",
+  "ThumbnailPath": "sprites/Dream.png",
+  "EntryPoint": "dream.dream",
+  "Tags": [
+    "Fun",
+    "Destructible",
+    "Realistic"
+  ],
+  "Scripts": [
+    "main.cs",
+    "scripts/CategoryBuilder.cs"
+  ],
+  "Active": true,
+  "UGCIdentity": "",
+  "CreatorUGCIdentity": "2357636207"
+}
