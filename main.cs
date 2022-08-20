@@ -1,3 +1,4 @@
+	// https://discord.com/invite/Yj45Gy3sfQ
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -77,7 +78,7 @@ ModAPI.Register(
 						Cartridge customCartridge = ModAPI.FindCartridge("9mm");
 						customCartridge.name = "DMusic";
 						firearm.Cartridge = customCartridge;
-						customCartridge.Damage = 0f; 
+						customCartridge.Damage = 0f;
 						customCartridge.StartSpeed *= 0f; 
 						customCartridge.PenetrationRandomAngleMultiplier *= 0f; 
 						customCartridge.Recoil *= 0f; 
@@ -92,22 +93,6 @@ ModAPI.Register(
 					}
 				}
 			);
-                ModAPI.Register(
-                    new Modification()
-                    {
-                        OriginalItem = ModAPI.FindSpawnable("Rod"),
-                        NameOverride = "<color=purple> Obama Crack Den Discord",
-                        DescriptionOverride = "Discord Server | https://discord.gg/Yj45Gy3sfQ",
-                        CategoryOverride = ModAPI.FindCategory("<color=green> Dream"),
-                        ThumbnailOverride = ModAPI.LoadSprite("sprites/discord.png"),
-				NameToOrderByOverride = "!",
-                        AfterSpawn = (Instance) =>
-                        {
-                            Utils.OpenURL("https://discord.gg/Yj45Gy3sfQ");
-                            GameObject.Destroy(Instance);
-                        }
-                    }
-                );
 		}
 	}
 }
