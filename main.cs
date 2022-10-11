@@ -88,8 +88,38 @@ ModAPI.Register(
 							ModAPI.LoadSound("sounds/Trance Music.mp3"),
 						};
 						Instance.FixColliders();
+						
+                    }
+                }
+            );
 
-				
+ModAPI.Register(
+			new Modification()
+			{
+				OriginalItem = ModAPI.FindSpawnable("Pistol"),
+				NameOverride = "<color=green> Dream Boss",
+				DescriptionOverride = "\n<color=yellow>**Disable Collision before using**",
+				CategoryOverride = ModAPI.FindCategory("<color=green> Dream"), 
+				ThumbnailOverride = ModAPI.LoadSprite("sprites/Dream Boss.png"), 
+                               NameToOrderByOverride = "a",
+				AfterSpawn = (Instance) => 
+				{
+						ModAPI.Notify("<color=red>" + "Oh No! " + "\n <color=orange>" + "Not Rumpelstiltskin");
+				      	Instance.GetComponent<SpriteRenderer>().sprite = ModAPI.LoadSprite("sprites/rumpelstiltskin.png", 1f);
+						var firearm = Instance.GetComponent<FirearmBehaviour>();
+						Cartridge customCartridge = ModAPI.FindCartridge("9mm");
+						customCartridge.name = "DMusic";
+						firearm.Cartridge = customCartridge;
+						customCartridge.Damage = 0f;
+						customCartridge.StartSpeed *= 0f; 
+						customCartridge.PenetrationRandomAngleMultiplier *= 0f; 
+						customCartridge.Recoil *= 0f; 
+						customCartridge.ImpactForce *= 0f; 
+						firearm.ShotSounds = new AudioClip[]
+						{
+							ModAPI.LoadSound("sounds/Boss Music.mp3"),
+						};
+						Instance.FixColliders();
 					}
 				}
 			);
