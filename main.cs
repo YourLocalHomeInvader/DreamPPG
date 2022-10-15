@@ -127,7 +127,6 @@ ModAPI.Register(
 						{
           					ModAPI.CreateParticleEffect("BigZap", Instance.transform.position);
           					ModAPI.CreateParticleEffect("Explosion", Instance.transform.position);
-                        		Instance.GetComponent<GeneratorBehaviour>().TargetCharge = 150000;
 						};
 					}
 				}
